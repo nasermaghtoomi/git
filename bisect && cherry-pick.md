@@ -19,7 +19,7 @@
   - Handling Conflicts
   - When to Use Git Cherry-pick
 - Merge vs Cherry-pick
-- Conclusion
+
 
 ---
 
