@@ -68,16 +68,16 @@ git bisect bad
 
 Or specify a commit explicitly:
 
-bash
+```
 git bisect bad <commit-hash>
-
+```
 ---
 
 ### 3. Mark a known good commit
 
-bash
+```
 git bisect good <commit-hash>
-
+```
 Git will automatically check out a commit halfway between the good and bad commits.
 
 ---
@@ -86,23 +86,22 @@ Git will automatically check out a commit halfway between the good and bad commi
 
 If the current commit works:
 
-bash
+```
 git bisect good
-
+```
 If it is broken:
-
-bash
+```
 git bisect bad
-
+```
 Git continues narrowing the range until it identifies the first bad commit.
 
 ---
 
 ### 5. Finish the process
 
-bash
+```
 git bisect reset
-
+```
 This returns you to your original branch.
 
 ---
@@ -111,14 +110,14 @@ This returns you to your original branch.
 
 If your project includes automated tests, you can automate the bisect process:
 
-bash
+```
 git bisect run npm test
-
+```
 or
 
-bash
+```
 git bisect run pytest
-
+```
 Git will execute the command and use the exit status to determine whether the commit is good or bad.
 
 ---
@@ -146,9 +145,9 @@ Unlike merge, it does not integrate the entire branch history. It applies only s
 
 Apply a single commit:
 
-bash
+```
 git cherry-pick <commit-hash>
-
+```
 This creates a new commit on the current branch containing the same changes.
 
 > Note: The new commit will have a different hash.
@@ -159,14 +158,14 @@ This creates a new commit on the current branch containing the same changes.
 
 Apply multiple specific commits:
 
-bash
+```
 git cherry-pick <hash1> <hash2>
-
+```
 Apply a range of commits:
 
-bash
+```
 git cherry-pick A^..B
-
+```
 ---
 
 ## Handling Conflicts
@@ -176,19 +175,19 @@ If a conflict occurs:
 1. Resolve the conflict manually
 2. Stage the resolved files:
 
-bash
+```
 git add .
-
+```
 3. Continue the cherry-pick process:
 
-bash
+```
 git cherry-pick --continue
-
+```
 To cancel the operation:
 
-bash
+```
 git cherry-pick --abort
-
+```
 ---
 
 ## When to Use Git Cherry-pick
