@@ -55,15 +55,16 @@ Example:
 
 ### 1. Start the bisect process
 
-bash
+```
 git bisect start
-
+```
 ---
 
 ### 2. Mark the current commit as bad
 
-bash
+```
 git bisect bad
+```
 
 Or specify a commit explicitly:
 
